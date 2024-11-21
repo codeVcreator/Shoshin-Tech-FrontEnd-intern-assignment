@@ -1,11 +1,17 @@
+import React from 'react'
 import './App.css';
+import Navbar from "./Components/Navbar";
+import Sidebar from "./Components/Sidebar";
+import Dashboard from './Pages/Dashboard';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hi Sahil</h1>
+    <div>
+      <Navbar />
+      <Dashboard />
+      <Sidebar />
     </div>
   );
-}
+};
 
-export default App;
+export default App
