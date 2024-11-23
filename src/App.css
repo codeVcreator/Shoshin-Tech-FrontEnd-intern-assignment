@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -26,9 +26,9 @@
 .navbar {
   height: 91px;
   width: 1198px;
-  padding: 0 50px;
+  padding-left: 50px;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
   left: 243px;
 }
@@ -73,39 +73,50 @@
   z-index: 100;
   top: 0;
   left: 0;
+  border-right: 1px solid #f1f1f1;
 }
 
 .main-menu {
   height: 318px;
   width: 242px;
+  justify-content: start;
 }
 
 .other {
   height: 150px;
   width: 242px;
+  justify-content: start;
 }
 
-.main-menu p, .other p {
-  font-family: 'Poppins';
+.main-menu p,
+.other p {
+  font-family: "Poppins";
   font-weight: 400;
   color: #686868;
   line-height: 24px;
   size: 16px;
 }
 
-.main-menu-options, .other-options {
+.main-menu-options,
+.other-options {
   height: 56px;
   width: 100%;
   padding: 16px 0 15px 30px;
   gap: 24px;
 }
 
-.main-menu-option, .other-option {
+.main-menu-option,
+.other-option {
   gap: 24px;
 }
 
-.sidebar-header{
-  font-family: 'Roboto';
+.main-menu-option p:hover, .other-option p:hover {
+  color: #ff5151;
+  cursor: pointer;
+}
+
+.sidebar-header {
+  font-family: "Roboto";
   width: 242px;
   height: 38px;
   padding: 10px 0 10px 30px;
@@ -115,9 +126,54 @@
   opacity: 50%;
 }
 
+/* 
+-----------------------------------------------------------------------------
+                                  DASHBOARD
+-----------------------------------------------------------------------------
+*/
+.dashboard {
+  height: calc(900px - 91px);
+  width: 1198px;
+  padding: 10px 50px;
+  color: #161e54;
+}
 
+.dashboard .title {
+  height: 62px;
+  width: 640px;
+  padding: 10px 10px 10px 0;
+  font-family: "Poppins";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 42px;
+}
 
+.dashboard-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
 
+.dashboard .left-part,
+.right-part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stats-section {
+  display: flex;
+  gap: 16px;
+  justify-content: start;
+  align-items: center;
+}
+
+.graph-stats-section {
+  display: flex;
+  gap: 16px;
+  justify-content: start;
+  align-items: center;
+}
 
 /* 
 -----------------------------------------------------------------------------
@@ -125,86 +181,372 @@
 -----------------------------------------------------------------------------
 */
 .card {
-  border: 1px solid #e0e0e0;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  text-align: center;
+  height: 136px;
+  width: 204px;
+  border-radius: 10px;
+  padding: 12px 12px 12px 20px;
+  gap: 16px;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card-title {
-  font-size: 16px;
-  color: #555;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
 }
 
 .card-value {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 8px 0;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 28px;
 }
 
 .card-change {
-  font-size: 12px;
-  color: red;
-}
-
-/* 
------------------------------------------------------------------------------
-                                  LIST
------------------------------------------------------------------------------
-*/
-.list {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: white;
-  padding: 16px;
-}
-
-.list-title {
+  font-family: "Roboto";
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
-.list-items {
-  list-style: none;
-  padding: 0;
+.position {
+  background-color: #ffefe7;
+}
+.position .card-change {
+  color: #ff5151;
 }
 
-.list-item {
-  font-size: 14px;
-  margin: 4px 0;
+.job {
+  background-color: #e8f0fb;
+}
+.job .card-change {
+  color: #3786f1;
+}
+
+.employees {
+  background-color: #fdebf9;
+}
+.employees .card-change {
+  color: #ee61cf;
 }
 
 /* 
 -----------------------------------------------------------------------------
-                                  HOMEPAGE
+                                  GRAPH-CARD
 -----------------------------------------------------------------------------
 */
-.dashboard {
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* Two sections: stats and list */
-  gap: 16px;
+.graphCard {
+  height: 190px;
+  width: 312px;
+  border-radius: 10px;
   padding: 20px;
+  font-family: "Poppins";
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-.stats-section {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(150px, 1fr)
-  ); /* Responsive grid */
-  gap: 16px;
+.graphCard:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.list-section {
-  display: grid;
-  gap: 16px;
+.graphCard .left-side {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.graphCard .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-@media (max-width: 768px) {
-  .dashboard {
-    grid-template-columns: 1fr; /* Stack sections vertically on mobile */
-  }
+.graphCard-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.graphCard-value {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.graphCard-men {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #686868;
+}
+
+.graphCard-women {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #686868;
+}
+
+.graphCard-percentage {
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: #ffefe7;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #303030;
+}
+
+/* 
+-----------------------------------------------------------------------------
+                                  ACTIVITY
+-----------------------------------------------------------------------------
+*/
+.activity-content {
+  height: 258px;
+  width: 427px;
+  border-radius: 10px;
+  background-color: #1b204a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.activity-header {
+  height: 48px;
+  width: calc(427px - 40px);
+  padding: 10px 10px 10px 0;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.activity-body {
+  height: 92px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.activity-footer {
+  height: 38px;
+  width: 369px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-footer p {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.activity-footer button {
+  padding: 10px 16px;
+  border-radius: 4px;
+  background-color: #ff5151;
+  border: none;
+  cursor: pointer;
+}
+
+.activity-footer button p {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #fff;
+}
+
+/* 
+-----------------------------------------------------------------------------
+                          ANNOUNCEMENT / SCHEDULE
+-----------------------------------------------------------------------------
+*/
+.announcement-section,
+.upcoming-schedule {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+.announcement {
+  height: 334px;
+  width: 640px;
+}
+
+.upcoming-schedule {
+  min-height: 424px;
+  width: 427px;
+}
+
+.announcement-content, .schedule-content {
+  padding: 0 20px;
+}
+
+.announcement-header, .schedule-header {
+  height: 28px;
+  width: 598px;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.schedule-header {
+  width: 386px;
+}
+
+.announcement-header p, .schedule-header p {
+  height: 28px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: linear-gradient(0deg, #161e54, #161e54),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.header-date {
+  height: 27px;
+  width: 145px;
+  padding: 0 6px;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #efefef;
+  color: #ffffff;
+}
+
+.header-date p {
+  height: 28px;
+  color: #686868;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 0 2px;
+}
+
+.header-date img {
+  height: 4px;
+  width: 10px;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  min-height: 68px;
+  width: 600px;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 95px;
+}
+
+.row-text {
+  min-width: 405px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 6px;
+}
+
+.row-text p {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #303030;
+}
+
+.row-text span {
+  font-family: "Roboto";
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #686868;
+}
+
+.row-images {
+  display: flex;
+  gap: 20px;
+  height: 24px;
+  width: 68px;
+}
+
+.row-images img {
+  height: 24px;
+  width: 24px;
+}
+
+.announcement-footer, .schedule-footer {
+  height: 40px;
+  width: 640px;
+  padding: 10px;
+}
+
+.schedule-footer {
+  width: 427px;
+}
+
+.announcement-footer p, .schedule-footer p {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: #ff5151;
+}
+
+/* 
+-----------------------------------------------------------------------------
+                                SCHEDULE
+-----------------------------------------------------------------------------
+*/
+.row-heading small {
+  font-family: 'Poppins';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #686868;
+}
+
+.schedule-content .rows .row-1, 
+.schedule-content .rows .row-2,
+.schedule-content .rows .row-3 {
+  gap: 29px;
+  width: 387px;
+}
+
+.schedule-content .rows .row-text {
+  min-width: 258px;
+  width: fit-content;
 }
