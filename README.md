@@ -3,13 +3,20 @@
 This project is a responsive webpage built using React.js as part of an internship assignment. The design and functionality align with the provided Figma designs and guidelines.
 
 ## Live Demo
-[Hosted Website Link](<https://shoshin-tech-assignment-eight.vercel.app/>)
+[Hosted Website Link](https://shoshin-tech-assignment-eight.vercel.app/)
 
 ## Features
 - Responsive design for both desktop and mobile views.
 - Developed using reusable React components.
 - Styled with CSS for an engaging UI.
 - Hosted on a free platform for review.
+
+## Screenshots
+### Desktop View
+![Desktop View](./public/images/desktop-view.png)
+
+### Mobile View
+![Mobile View](./public/images/mobile-view.png)
 
 ## Installation and Setup
 1. Clone the repository:
@@ -41,19 +48,8 @@ This project is a responsive webpage built using React.js as part of an internsh
    - Styled for responsiveness.
 
 
-## Screenshots
-### Desktop View
-![Desktop View](./public/images/desktop-view.png)
-
-### Mobile View
-![Mobile View](./public/images/mobile-view.png)
-
 ## Technologies Used
 - **React.js**: Library for building the user interface.
 - **CSS**: For styling the components.
 - **Create React App**: Boilerplate for initializing the project.
 - **Free Hosting Platform**: For deploying the webpage.
-
-## How to Use
-1. Visit the [live demo](<https://shoshin-tech-assignment-eight.vercel.app/>).
-2. Resize the browser to view the responsive design on desktop and mobile screens.
