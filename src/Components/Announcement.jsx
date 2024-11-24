@@ -4,6 +4,7 @@ const Announcement = () => {
   return (
     <div className="announcement">
       <div className="announcement-content">
+        
         <div className="announcement-header">
           <p>Announcement</p>
           <div className="header-date">

@@ -44,12 +44,7 @@ const Dashboard = () => {
   //--------------------------------------------------------------------------------------------
 
   return (
-    <div
-      style={{
-        marginTop: "91px",
-        marginLeft: "242px",
-      }}
-    >
+    <div className="dashboard-container">
       <div className="dashboard">
         <h3 className="title">Dashboard</h3>
 

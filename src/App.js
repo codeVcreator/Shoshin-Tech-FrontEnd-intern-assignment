@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
 import Dashboard from './Pages/Dashboard';
 
 const App = () => {
+  const [sideBarOpen, setSideBarOpen] = useState(false)
+
+  const toggleSidebar = () => {
+    setSideBarOpen(!sideBarOpen) 
+  }
+
   return (
     <div>
-      <Navbar />
+      <Navbar toggleSidebar={toggleSidebar} />
       <Dashboard />
-      <Sidebar />
+      <Sidebar isOpen={sideBarOpen} />
     </div>
   );
 };

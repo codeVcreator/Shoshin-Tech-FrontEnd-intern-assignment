@@ -1,9 +1,9 @@
 import React from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   return (
-    <div className="sidebar flex-start">
-      <div className="logo" style={{marginBottom: "39px"}}>
+    <div className={`sidebar flex-start ${isOpen ? "open" : ""}`}>
+      <div className="logo">
         <img src="./images/sidebar/logo.png" alt="logo" />
       </div>
 
