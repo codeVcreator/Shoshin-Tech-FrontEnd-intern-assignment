@@ -55,5 +55,5 @@ This project is a responsive webpage built using React.js as part of an internsh
 - **Free Hosting Platform**: For deploying the webpage.
 
 ## How to Use
-1. Visit the [live demo](<YOUR_HOSTING_URL>).
+1. Visit the [live demo](<https://shoshin-tech-assignment-eight.vercel.app/>).
 2. Resize the browser to view the responsive design on desktop and mobile screens.
